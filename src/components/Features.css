@@ -1,24 +1,23 @@
-/* Features Section Styles - Dark Glass Theme */
+/* Features Section Styles - Warm Cream Theme */
 .features-section {
-  background-color: var(--dark-bg);
+  background-color: var(--bg-main);
   position: relative;
   overflow: hidden;
 }
 
 .feature-card {
-  background: var(--dark-card);
-  backdrop-filter: blur(16px);
-  border: 1px solid var(--glass-border);
+  background: #ffffff;
+  border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
   padding: 2.25rem 1.5rem;
   text-align: center;
+  box-shadow: var(--shadow-sm);
   transition: var(--transition-normal);
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
-  background: var(--dark-card-hover);
-  border-color: var(--glass-border-hover);
+  border-color: var(--leather);
   box-shadow: var(--shadow-lg);
 }
 
@@ -26,27 +25,26 @@
   width: 64px;
   height: 64px;
   margin: 0 auto 1.25rem auto;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--bg-main);
   border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--glass-border);
+  border: 1px solid var(--border-soft);
   transition: var(--transition-normal);
 }
 
 .feature-card:hover .feature-icon-box {
   background: var(--leather);
-  border-color: var(--accent);
 }
 
 .feature-card-icon {
-  color: var(--accent);
+  color: var(--leather);
   transition: var(--transition-normal);
 }
 
 .feature-card:hover .feature-card-icon {
-  color: var(--white);
+  color: #ffffff;
 }
 
 .feature-card-title {
