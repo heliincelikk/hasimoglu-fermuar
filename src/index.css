@@ -1,30 +1,29 @@
 /* ==========================================================================
-   DESIGN SYSTEM & CORE STYLES - HAŞIMOĞLU FERMUAR (KIRIK BEYAZ & YUMUŞAK GRİ TEMA)
+   DESIGN SYSTEM & CORE STYLES - HAŞIMOĞLU FERMUAR (MAT GRAFİT #23272A TEMA)
    ========================================================================== */
 
 :root {
-  /* Kullanıcının Özel Belirttiği İdeal Göz Yormayan Renk Paleti */
-  --bg-main: #F5F5F5;          /* Yumuşak Açık Gri Zemin (Saf Beyaz/Siyah Değil) */
-  --bg-card: #FDFDFD;          /* Kırık Beyaz Kart Yüzeyi */
-  --bg-section: #F4F4F4;       /* Kırık Beyaz / Açık Gri İkincil Zemin */
-  --bg-warm-section: #FDFBF7;  /* Sıcak Krem / Bej Bölüm Zemi */
+  /* Kullanıcının Özel İstediği Mat Grafit Renk Paleti */
+  --bg-main: #23272A;          /* Mat Grafit Arka Plan (Sleek Dark Graphite) */
+  --bg-section: #1e2124;       /* İkincil Derin Grafit Bölüm Zemin */
+  --bg-card: #2c2f33;          /* Mat Grafit Kart Yüzeyi */
+  
+  --text-main: #ffffff;        /* Net Parlak Beyaz Metin */
+  --text-muted: #99aab5;       /* Yumuşak Grafit Gri Metin */
+  --text-dim: #7289da;
 
-  --text-main: #222222;        /* Yumuşak Koyu Antrasit (Saf Siyah Değil, Yüksek Kontrastı Engeller) */
-  --text-muted: #555555;       /* Muted Gri Metin */
-  --text-dim: #777777;
-
-  --primary: #1e3a8a;          /* Kurumsal Lacivert */
-  --primary-hover: #2563eb;
-  --leather: #85532b;          /* Şık Taba / Deri Rengi */
-  --accent: #d97706;           /* Kehribar Sarı */
+  --primary: #2563eb;          /* Canlı Lacivert */
+  --primary-hover: #3b82f6;
+  --leather: #d97706;          /* Sıcak Taba / Deri Rengi */
+  --accent: #f59e0b;           /* Parlak Kehribar */
 
   /* Gölgeler ve Kenarlıklar */
-  --border-soft: #e5e5e5;
-  --border-hover: #cccccc;
+  --border-soft: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(217, 119, 6, 0.4);
   
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.09);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.6);
 
   /* Fontlar ve Geçişler */
   --font-heading: 'Outfit', sans-serif;
@@ -108,9 +107,9 @@ button, input, textarea, select {
   align-items: center;
   gap: 0.5rem;
   padding: 0.45rem 1.1rem;
-  background-color: rgba(133, 83, 43, 0.08);
-  border: 1px solid rgba(133, 83, 43, 0.2);
-  color: var(--leather);
+  background-color: rgba(217, 119, 6, 0.15);
+  border: 1px solid rgba(217, 119, 6, 0.3);
+  color: var(--accent);
   border-radius: var(--radius-full);
   font-size: 0.85rem;
   font-weight: 700;
@@ -127,7 +126,7 @@ button, input, textarea, select {
 }
 
 .section-title span {
-  color: var(--leather);
+  color: var(--accent);
 }
 
 .section-subtitle {
@@ -159,13 +158,13 @@ button, input, textarea, select {
 .btn-primary {
   background: var(--leather);
   color: #ffffff;
-  box-shadow: 0 4px 16px rgba(133, 83, 43, 0.3);
+  box-shadow: 0 4px 16px rgba(217, 119, 6, 0.35);
 }
 
 .btn-primary:hover {
-  background: #6e4321;
+  background: #b45309;
   transform: translateY(-2px);
-  box-shadow: 0 6px 22px rgba(133, 83, 43, 0.45);
+  box-shadow: 0 6px 22px rgba(217, 119, 6, 0.5);
 }
 
 .btn-secondary {
@@ -176,7 +175,7 @@ button, input, textarea, select {
 }
 
 .btn-secondary:hover {
-  background-color: var(--bg-section);
+  background-color: rgba(255, 255, 255, 0.1);
   border-color: var(--border-hover);
   transform: translateY(-2px);
 }
@@ -184,16 +183,16 @@ button, input, textarea, select {
 .btn-whatsapp {
   background-color: #25d366;
   color: #ffffff;
-  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
 }
 
 .btn-whatsapp:hover {
   background-color: #20ba5a;
   transform: translateY(-2px);
-  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.5);
 }
 
-/* Kart Stilleri (Kırık Beyaz #FDFDFD Kartlar) */
+/* Kart Stilleri (#2c2f33 Mat Grafit Kartlar) */
 .card {
   background: var(--bg-card);
   border-radius: var(--radius-lg);
@@ -205,7 +204,7 @@ button, input, textarea, select {
 .card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
-  border-color: rgba(133, 83, 43, 0.3);
+  border-color: var(--border-hover);
 }
 
 /* Grid Yapıları */

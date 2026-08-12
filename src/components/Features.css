@@ -1,4 +1,4 @@
-/* Features Section Styles - #F5F5F5 & #FDFDFD */
+/* Features Section Styles - Mat Grafit #23272A */
 .features-section {
   background-color: var(--bg-main);
   position: relative;
@@ -6,8 +6,8 @@
 }
 
 .feature-card {
-  background: #FDFDFD;
-  border: 1px solid var(--border-soft);
+  background: #2c2f33;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-lg);
   padding: 2.25rem 1.5rem;
   text-align: center;
@@ -17,7 +17,7 @@
 
 .feature-card:hover {
   transform: translateY(-5px);
-  border-color: var(--leather);
+  border-color: rgba(217, 119, 6, 0.4);
   box-shadow: var(--shadow-lg);
 }
 
@@ -25,12 +25,12 @@
   width: 64px;
   height: 64px;
   margin: 0 auto 1.25rem auto;
-  background: var(--bg-main);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--border-soft);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: var(--transition-normal);
 }
 
@@ -39,7 +39,7 @@
 }
 
 .feature-card-icon {
-  color: var(--leather);
+  color: var(--accent);
   transition: var(--transition-normal);
 }
 
@@ -50,7 +50,7 @@
 .feature-card-title {
   font-size: 1.15rem;
   margin-bottom: 0.65rem;
-  color: var(--text-main);
+  color: #ffffff;
 }
 
 .feature-card-desc {

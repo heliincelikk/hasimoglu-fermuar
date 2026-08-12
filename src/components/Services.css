@@ -1,6 +1,6 @@
-/* Collection (Koleksiyon) Section Styles - #FDFBF7 & #FDFDFD */
+/* Collection (Koleksiyon) Section Styles - Mat Grafit #23272A */
 .collection-section {
-  background-color: var(--bg-warm-section);
+  background-color: var(--bg-section);
   padding-top: 5rem;
   padding-bottom: 5rem;
   position: relative;
@@ -12,14 +12,14 @@
   justify-content: space-between;
   margin-bottom: 2.5rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid var(--border-soft);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .collection-main-title {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--text-main);
+  color: #ffffff;
   letter-spacing: -0.02em;
 }
 
@@ -29,12 +29,12 @@
   gap: 0.25rem;
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--leather);
+  color: var(--accent);
   transition: var(--transition-fast);
 }
 
 .view-all-link:hover {
-  color: var(--text-main);
+  color: #ffffff;
   gap: 0.5rem;
 }
 
@@ -51,15 +51,16 @@
   height: 340px;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-md);
-  border: 4px solid #FDFDFD;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   cursor: pointer;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.4s ease;
 }
 
 .collection-card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
+  border-color: rgba(217, 119, 6, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
 }
 
 /* Görsel */
@@ -79,7 +80,7 @@
 .collection-card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(34, 34, 34, 0.05) 20%, rgba(34, 34, 34, 0.85) 100%);
+  background: linear-gradient(180deg, rgba(35, 39, 42, 0.1) 20%, rgba(30, 33, 36, 0.92) 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -87,15 +88,15 @@
   padding: 1.75rem;
 }
 
-/* Görseldeki Kırık Beyaz Rozet */
+/* Görseldeki Rozet */
 .collection-pill-badge {
-  background-color: #FDFDFD;
-  color: #222222;
+  background-color: #ffffff;
+  color: #23272A;
   font-size: 0.9rem;
   font-weight: 700;
   padding: 0.45rem 1.1rem;
   border-radius: var(--radius-sm);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   margin-bottom: 0.75rem;
 }
 
@@ -104,7 +105,7 @@
   color: #ffffff;
   font-size: 1.5rem;
   font-weight: 700;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
   margin: 0;
 }
 
