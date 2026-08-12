@@ -1,32 +1,30 @@
 /* ==========================================================================
-   DESIGN SYSTEM & CORE STYLES - HAŞIMOĞLU FERMUAR (YUMUŞAK KREM / KETEN BUTİK TEMA)
+   DESIGN SYSTEM & CORE STYLES - HAŞIMOĞLU FERMUAR (MODERN SLATE GRİ TEMA)
    ========================================================================== */
 
 :root {
-  /* Renk Paleti (Ne Koyu Mod, Ne Parlak Beyaz: Sıcak Krem, Kahve & Deri Tonları) */
-  --primary: #85532b;          /* Şık Deri / Taba Rengi */
-  --primary-hover: #6e4321;
-  --primary-light: rgba(133, 83, 43, 0.08);
-  --leather: #85532b;
-  --accent: #d97706;           /* Sıcak Kehribar / Altın */
-  --accent-hover: #b45309;
+  /* Renk Paleti (Modern Slate Gri - Göz Yormayan, Temiz ve Kurumsal) */
+  --primary: #1e3a8a;          /* Derin Kurumsal Lacivert */
+  --primary-hover: #2563eb;
+  --leather: #85532b;          /* Şık Taba / Deri Rengi */
+  --accent: #f59e0b;           /* Kehribar Sarı */
   
-  /* Arka Plan Renkleri (Sert Beyaz Yerin Yumuşak İpek/Krem Keten Zemin) */
-  --bg-main: #f4f1ea;          /* Sıcak Krem Zemin (Gözü Hiç Yormaz) */
-  --bg-section: #ebe7df;       /* İkincil Yumuşak Bölüm Zemi */
-  --bg-card: #ffffff;          /* Beyaz Kart Yüzeyi */
+  /* Arka Plan Renkleri (Sarı/Krem Değil, Şık Yumuşak Slate Gri Zemin) */
+  --bg-main: #eef2f6;          /* Modern Yumuşak Slate Gri (Gözü Dinlendirir) */
+  --bg-section: #e2e8f0;       /* Alternatif Bölüm Grisi */
+  --bg-card: #ffffff;          /* Temiz Kart Yüzeyi */
   
-  --text-main: #2a2421;        /* Sıcak Koyu Kömür/Kahve Metin (Siyah Kadar Sert Değil) */
-  --text-muted: #6b615b;       /* Yumuşak Tatlı Gri/Kahve Metin */
-  --text-dim: #998e85;
+  --text-main: #0f172a;        /* Net Lacivert/Kömür Grisi Metin */
+  --text-muted: #475569;       /* Yumuşak Kurumsal Gri Metin */
+  --text-dim: #64748b;
 
   /* Gölgeler ve Kenarlıklar */
-  --border-soft: #e2ded5;
-  --border-hover: #c9c3b6;
+  --border-soft: #cbd5e1;
+  --border-hover: #94a3b8;
   
-  --shadow-sm: 0 2px 8px rgba(42, 36, 33, 0.04);
-  --shadow-md: 0 10px 25px -5px rgba(42, 36, 33, 0.07);
-  --shadow-lg: 0 20px 35px -10px rgba(42, 36, 33, 0.12);
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 20px 35px -10px rgba(15, 23, 42, 0.14);
 
   /* Fontlar ve Geçişler */
   --font-heading: 'Outfit', sans-serif;
@@ -110,9 +108,9 @@ button, input, textarea, select {
   align-items: center;
   gap: 0.5rem;
   padding: 0.45rem 1.1rem;
-  background-color: rgba(133, 83, 43, 0.1);
-  border: 1px solid rgba(133, 83, 43, 0.2);
-  color: var(--leather);
+  background-color: rgba(30, 58, 138, 0.1);
+  border: 1px solid rgba(30, 58, 138, 0.2);
+  color: var(--primary);
   border-radius: var(--radius-full);
   font-size: 0.85rem;
   font-weight: 700;
@@ -178,7 +176,7 @@ button, input, textarea, select {
 }
 
 .btn-secondary:hover {
-  background-color: #f8f6f0;
+  background-color: #f1f5f9;
   border-color: var(--border-hover);
   transform: translateY(-2px);
 }
@@ -207,7 +205,7 @@ button, input, textarea, select {
 .card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
-  border-color: rgba(133, 83, 43, 0.3);
+  border-color: rgba(30, 58, 138, 0.25);
 }
 
 /* Grid Yapıları */
@@ -239,22 +237,4 @@ button, input, textarea, select {
   .grid-2, .grid-3, .grid-4 {
     grid-template-columns: 1fr;
   }
-}
-
-/* HAREKETLİ YUMUŞAK AMBİYANS IŞILTILARI */
-@keyframes floatWarmGlow1 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(40px, -30px) scale(1.1); }
-}
-
-.ambient-warm-glow {
-  position: absolute;
-  width: 450px;
-  height: 450px;
-  border-radius: 50%;
-  background: rgba(217, 119, 6, 0.07);
-  filter: blur(80px);
-  pointer-events: none;
-  animation: floatWarmGlow1 12s infinite ease-in-out;
-  z-index: 0;
 }
