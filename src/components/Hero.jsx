@@ -3,19 +3,21 @@ import { ArrowRight, Award, ShieldCheck, Star, MessageSquare } from 'lucide-reac
 import { siteInfo } from '../data/siteData';
 import './Hero.css';
 
+// Kullanıcının Özel Seçtiği 5 Adet Yüksek Kaliteli Fermuar Görseli
+import slide1 from '../assets/slide1.jpg';
+import slide2 from '../assets/slide2.png';
+import slide3 from '../assets/slide3.png';
+import slide4 from '../assets/slide4.png';
+import slide5 from '../assets/slide5.png';
+
 /**
- * 🧵 SADECE FERMUAR GÖRSELLERİ İLE OTOMATİK SLIDER (Hero.jsx)
+ * 🧵 KULLANICININ ÖZEL SEÇTİĞİ FERMUAR FOTOĞRAFLARI İLE SLIDER (Hero.jsx)
  * 
- * Slider kontrolleri (oklar/noktalar) kaldırılarak tamamen temiz hale getirildi.
- * Sadece yüksek kaliteli %100 fermuar görselleri arka planda otomatik kayar.
+ * Sizin gönderdiğiniz 5 özel fermuar fotoğrafı arasında
+ * her 4 saniyede bir otomatik yumuşak geçiş yapar.
  */
 
-const zipperBackgroundSlides = [
-  "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1600&q=80", // Metal Dişli Fermuar
-  "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1600&q=80", // Renkli Kemik Fermuar
-  "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1600&q=80", // Koyu Deri Üzeri Metal Fermuar
-  "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?auto=format&fit=crop&w=1600&q=80"  // Fermuar Elcik & Kürsör Detayı
-];
+const userZipperSlides = [slide1, slide2, slide3, slide4, slide5];
 
 export default function Hero() {
   const { contact } = siteInfo;
@@ -24,7 +26,7 @@ export default function Hero() {
   // Otomatik Slayt Geçişi (Her 4 saniyede bir)
   useEffect(() => {
     const slideTimer = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % zipperBackgroundSlides.length);
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % userZipperSlides.length);
     }, 4000);
 
     return () => clearInterval(slideTimer);
@@ -32,17 +34,17 @@ export default function Hero() {
 
   return (
     <section id="hero" className="hero-slider-section">
-      {/* Kayan Sadece Fermuar Arka Plan Fotoğrafları */}
-      {zipperBackgroundSlides.map((slideImg, index) => (
+      {/* Kullanıcının Seçtiği 5 Özel Fermuar Arka Plan Fotoğrafı */}
+      {userZipperSlides.map((slideImg, index) => (
         <div
           key={index}
           className={`hero-bg-slide ${index === currentSlide ? 'active' : ''}`}
         >
-          <img src={slideImg} alt="Haşımoğlu Fermuar" className="hero-slide-img" />
+          <img src={slideImg} alt="Haşımoğlu Fermuar Özel Üretim" className="hero-slide-img" />
         </div>
       ))}
 
-      {/* Koyu Karartma Katmanı */}
+      {/* Koyu Karartma Katmanı (Okunabilirlik İçin) */}
       <div className="hero-slider-overlay"></div>
 
       <div className="container hero-slider-container">
