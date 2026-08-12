@@ -19,9 +19,9 @@ export default function About() {
           {/* Sol Kolon - Resim ve Deneyim Rozeti */}
           <div className="about-image-column">
             <div className="about-image-frame">
-              <img 
-                src="https://images.unsplash.com/photo-1577412647305-991150c7d163?auto=format&fit=crop&w=800&q=80" 
-                alt="Hakkımızda" 
+              <img
+                src="https://images.unsplash.com/photo-1577412647305-991150c7d163?auto=format&fit=crop&w=800&q=80"
+                alt="Hakkımızda"
                 className="about-img"
               />
               <div className="experience-badge">
@@ -35,7 +35,7 @@ export default function About() {
           <div className="about-content">
             <div className="section-tag">{about.badge}</div>
             <h2 className="section-title">{about.title}</h2>
-            
+
             <p className="about-text">{about.description1}</p>
             <p className="about-text text-secondary">{about.description2}</p>
 
@@ -46,7 +46,7 @@ export default function About() {
               </li>
               <li>
                 <CheckCircle className="check-icon" size={20} />
-                <span>Deneyimli ve Sertifikalı Profesyonel Kadro</span>
+                <span>Deneyimli ve Üretken Kadro</span>
               </li>
               <li>
                 <CheckCircle className="check-icon" size={20} />

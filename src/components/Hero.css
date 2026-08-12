@@ -154,83 +154,8 @@
   color: var(--accent);
 }
 
-/* SLİDER GEÇİŞ KONTROLLERİ (Sağ Alt Köşe) */
-.slider-controls {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  background: rgba(15, 23, 42, 0.75);
-  backdrop-filter: blur(12px);
-  padding: 0.6rem 1.25rem;
-  border-radius: var(--radius-full);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.slider-arrows {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.slider-arrow-btn {
-  background: rgba(255, 255, 255, 0.15);
-  color: var(--white);
-  border: none;
-  width: 34px;
-  height: 34px;
-  border-radius: var(--radius-full);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: var(--transition-fast);
-}
-
-.slider-arrow-btn:hover {
-  background: var(--primary);
-  transform: scale(1.1);
-}
-
-.slider-dots {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.slider-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.35);
-  cursor: pointer;
-  transition: var(--transition-fast);
-}
-
-.slider-dot.active {
-  width: 24px;
-  background: #85532b;
-}
-
-.slider-caption-tag {
-  font-size: 0.8rem;
-  color: #cbd5e1;
-  font-weight: 500;
-}
-
 @media (max-width: 992px) {
   .hero-serif-title {
     font-size: 2.8rem;
-  }
-
-  .slider-controls {
-    position: relative;
-    bottom: auto;
-    right: auto;
-    margin-top: 2rem;
-    justify-content: center;
   }
 }

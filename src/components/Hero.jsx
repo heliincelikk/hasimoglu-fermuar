@@ -1,74 +1,48 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Award, ShieldCheck, Star, MessageSquare, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight, Award, ShieldCheck, Star, MessageSquare } from 'lucide-react';
 import { siteInfo } from '../data/siteData';
 import './Hero.css';
 
 /**
- * 🎠 SLIDER / CAROUSEL ARKA PLANLI HERO COMPONENT (Hero.jsx)
+ * 🧵 SADECE FERMUAR GÖRSELLERİ İLE OTOMATİK SLIDER (Hero.jsx)
  * 
- * REACT ÖĞRENME NOTU:
- * `heroSlides` dizisindeki fermuar görsellerini `useEffect` ve `setInterval`
- * kullanarak her 4 saniyede bir otomatik olarak kaydırıyoruz (Slider).
- * Kullanıcı ok veya noktalara basarak da fotoğraflar arasında geçiş yapabilir!
+ * Slider kontrolleri (oklar/noktalar) kaldırılarak tamamen temiz hale getirildi.
+ * Sadece yüksek kaliteli %100 fermuar görselleri arka planda otomatik kayar.
  */
 
-const heroSlides = [
-  {
-    id: 1,
-    image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1600&q=80",
-    caption: "Metal Fermuar Üretimi"
-  },
-  {
-    id: 2,
-    image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1600&q=80",
-    caption: "Renkli Kemik & Plastik Fermuarlar"
-  },
-  {
-    id: 3,
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1600&q=80",
-    caption: "Tekstil ve Konfeksiyon İmalatı"
-  },
-  {
-    id: 4,
-    image: "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?auto=format&fit=crop&w=1600&q=80",
-    caption: "Özel Tasarım Elcik & Aksesuarlar"
-  }
+const zipperBackgroundSlides = [
+  "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1600&q=80", // Metal Dişli Fermuar
+  "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1600&q=80", // Renkli Kemik Fermuar
+  "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1600&q=80", // Koyu Deri Üzeri Metal Fermuar
+  "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?auto=format&fit=crop&w=1600&q=80"  // Fermuar Elcik & Kürsör Detayı
 ];
 
 export default function Hero() {
   const { contact } = siteInfo;
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Otomatik Slider (Her 4 saniyede bir sonraki fotoğrafa geçer)
+  // Otomatik Slayt Geçişi (Her 4 saniyede bir)
   useEffect(() => {
     const slideTimer = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % heroSlides.length);
-    }, 4500);
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % zipperBackgroundSlides.length);
+    }, 4000);
 
     return () => clearInterval(slideTimer);
   }, []);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-  };
-
   return (
     <section id="hero" className="hero-slider-section">
-      {/* Kayan Arka Plan Fotoğrafları (Background Carousel) */}
-      {heroSlides.map((slide, index) => (
+      {/* Kayan Sadece Fermuar Arka Plan Fotoğrafları */}
+      {zipperBackgroundSlides.map((slideImg, index) => (
         <div
-          key={slide.id}
+          key={index}
           className={`hero-bg-slide ${index === currentSlide ? 'active' : ''}`}
         >
-          <img src={slide.image} alt={slide.caption} className="hero-slide-img" />
+          <img src={slideImg} alt="Haşımoğlu Fermuar" className="hero-slide-img" />
         </div>
       ))}
 
-      {/* Koyu Karartma Katmanı (Okunabilirlik İçin) */}
+      {/* Koyu Karartma Katmanı */}
       <div className="hero-slider-overlay"></div>
 
       <div className="container hero-slider-container">
@@ -123,32 +97,6 @@ export default function Hero() {
               <span>Özel Ölçü Kesim</span>
             </div>
           </div>
-        </div>
-
-        {/* SLİDER GEÇİŞ KONTROLLERİ (Sağ Alt Köşe Oklar ve Noktalar) */}
-        <div className="slider-controls">
-          <div className="slider-arrows">
-            <button onClick={prevSlide} className="slider-arrow-btn" aria-label="Önceki Fotoğraf">
-              <ChevronLeft size={22} />
-            </button>
-            <button onClick={nextSlide} className="slider-arrow-btn" aria-label="Sonraki Fotoğraf">
-              <ChevronRight size={22} />
-            </button>
-          </div>
-
-          <div className="slider-dots">
-            {heroSlides.map((_, idx) => (
-              <span
-                key={idx}
-                className={`slider-dot ${idx === currentSlide ? 'active' : ''}`}
-                onClick={() => setCurrentSlide(idx)}
-              ></span>
-            ))}
-          </div>
-
-          <span className="slider-caption-tag">
-            📸 {heroSlides[currentSlide].caption}
-          </span>
         </div>
       </div>
     </section>
