@@ -3,7 +3,7 @@ import { ArrowRight, Award, ShieldCheck, Star, MessageSquare } from 'lucide-reac
 import { siteInfo } from '../data/siteData';
 import './Hero.css';
 
-// Kullanıcının Özel Seçtiği 5 Adet Yüksek Kaliteli Fermuar Görseli
+// Kullanıcının Seçtiği 5 Özel Fermuar Görseli
 import slide1 from '../assets/slide1.jpg';
 import slide2 from '../assets/slide2.png';
 import slide3 from '../assets/slide3.png';
@@ -11,13 +11,17 @@ import slide4 from '../assets/slide4.png';
 import slide5 from '../assets/slide5.png';
 
 /**
- * 🧵 KULLANICININ ÖZEL SEÇTİĞİ FERMUAR FOTOĞRAFLARI İLE SLIDER (Hero.jsx)
+ * 🧵 YENİDEN SIRALANMIŞ ÖZEL FERMUAR GÖRSELLERİ (Hero.jsx)
  * 
- * Sizin gönderdiğiniz 5 özel fermuar fotoğrafı arasında
- * her 4 saniyede bir otomatik yumuşak geçiş yapar.
+ * Görsellerin geçiş sırası yeniden düzenlendi:
+ * 1. Koyu mermer üzerindeki gümüş & siyah metal fermuarlar (slide4)
+ * 2. Yağmur damlalı teknik su geçirmez fermuar (slide2)
+ * 3. Deri tezgahtaki antik metal fermuarlar (slide1)
+ * 4. Mermer üzerindeki rose gold & renkli fermuarlar (slide3)
+ * 5. Yakın çekim şık fermuar elciği (slide5)
  */
 
-const userZipperSlides = [slide1, slide2, slide3, slide4, slide5];
+const userZipperSlides = [slide4, slide2, slide1, slide3, slide5];
 
 export default function Hero() {
   const { contact } = siteInfo;
