@@ -1,16 +1,44 @@
-# React + Vite
+# 🧵 Haşımoğlu Fermuar - Kurumsal Web Sitesi & React Projesi
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Bu proje, **Haşımoğlu Fermuar (20 Yıllık Üstün Kalite İmalat)** dükkanı için React + Vite teknolojileri kullanılarak geliştirilmiş modern, mobil uyumlu ve göz yormayan kurumsal tanıtım web sitesidir.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌟 Öne Çıkan Özellikler
 
-## React Compiler
+- 🧵 **Fermuar Çeşitleri Kataloğu**: Metal, Kemik, Gizli ve Su Geçirmez fermuar serilerinin şık fotoğraflı koleksiyon kartları.
+- 📱 **Doğrudan İletişim & WhatsApp Sipariş**: Form kalabalığı olmadan tek tıkla WhatsApp sipariş ve arama imkanı.
+- 🗺️ **Google Harita & Yol Tarifi**: Bayrampaşa dükkan adresine tek tıkla yol tarifi alma entegrasyonu.
+- 👁️ **Göz Yormayan Sıcak Renk Paleti**: Keten/krem zemin ve mat deri/kömür tonlarıyla dinlendirici tasarım.
+- ⚡ **Vite + React Altyapısı**: Işık hızında yüklenme ve modüler bileşen (Component) mimarisi.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## 🛠️ Kullanılan Teknolojiler
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- **React 18** (JSX, Hooks, Component-based Architecture)
+- **Vite** (Geliştirici Sunucusu & Bundler)
+- **Vanilla CSS3** (Göz yormayan özel renk paleti & Glassmorphism)
+- **Lucide React** (Modern vektörel ikonlar)
+
+---
+
+## 🚀 Projeyi Yerelde Çalıştırma
+
+```bash
+# Bağımlılıkları yükleyin
+npm install
+
+# Geliştirici sunucusunu başlatın
+npm run dev
+```
+
+Sayfayı görüntülemek için tarayıcınızda `http://localhost:5173/` adresini açın.
+
+---
+
+## 📍 İletişim Bilgileri
+
+- **Firma Adı:** Haşımoğlu Fermuar
+- **Adres:** Yıldırım, 100. Yıl Cd 9/a, 34000 Bayrampaşa - İstanbul
+- **Telefon / WhatsApp:** +90 (532) 583 08 32
