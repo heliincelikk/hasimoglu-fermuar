@@ -1,13 +1,13 @@
 import React from 'react';
 import { CheckCircle, Award, Users, Briefcase } from 'lucide-react';
 import { siteInfo } from '../data/siteData';
+import storeImg from '../assets/store.jpg';
 import './About.css';
 
 /**
- * REACT DERSİ #3: NESNE PARÇALAMA (DESTRUCTURING) & PROPS KULLANIMI
+ * HAŞİMOĞLU FERMUAR - HAKKIMIZDA BİLEŞENİ (About.jsx)
  * 
- * siteInfo.about nesnesini `{ title, description1, description2 }` şeklinde
- * parçalayarak kodumuzu daha temiz ve okunabilir yapıyoruz.
+ * Babanızın Bayrampaşa'daki gerçek fermuar mağazasının fotoğrafı entegre edildi.
  */
 export default function About() {
   const { about } = siteInfo;
@@ -16,12 +16,12 @@ export default function About() {
     <section id="about" className="section-padding about-section">
       <div className="container">
         <div className="grid-2 about-grid">
-          {/* Sol Kolon - Resim ve Deneyim Rozeti */}
+          {/* Sol Kolon - Babanın Gerçek Mağaza Fotoğrafı ve 20 Yıl Deneyim Rozeti */}
           <div className="about-image-column">
             <div className="about-image-frame">
-              <img
-                src="https://images.unsplash.com/photo-1577412647305-991150c7d163?auto=format&fit=crop&w=800&q=80"
-                alt="Hakkımızda"
+              <img 
+                src={storeImg} 
+                alt="Haşımoğlu Fermuar Bayrampaşa Mağazamız" 
                 className="about-img"
               />
               <div className="experience-badge">
@@ -35,7 +35,7 @@ export default function About() {
           <div className="about-content">
             <div className="section-tag">{about.badge}</div>
             <h2 className="section-title">{about.title}</h2>
-
+            
             <p className="about-text">{about.description1}</p>
             <p className="about-text text-secondary">{about.description2}</p>
 
