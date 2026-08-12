@@ -1,37 +1,54 @@
-/* Hero Section with Interactive Zipper Animation */
-.hero-zipper-section {
+/* Hero Section with Auto Background Slider / Carousel */
+.hero-slider-section {
   position: relative;
-  min-height: 82vh;
+  min-height: 85vh;
   padding-top: 9.5rem;
   padding-bottom: 6rem;
   display: flex;
   align-items: center;
   overflow: hidden;
-  background-color: #0f172a;
+  background-color: var(--dark);
 }
 
-/* Dark Textile Pattern Background */
-.hero-dark-pattern {
+/* Kayan Arka Plan Slaytları */
+.hero-bg-slide {
   position: absolute;
   inset: 0;
-  background: 
-    radial-gradient(circle at 80% 20%, rgba(133, 83, 43, 0.25) 0%, transparent 40%),
-    radial-gradient(circle at 20% 80%, rgba(30, 58, 138, 0.3) 0%, transparent 50%),
-    linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  opacity: 0;
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 8s ease;
   z-index: 0;
+  transform: scale(1.05);
 }
 
-.hero-zipper-section .hero-container {
+.hero-bg-slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hero-slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.65) contrast(1.1);
+}
+
+/* Koyu Karartma Katmanı */
+.hero-slider-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.72) 50%, rgba(15, 23, 42, 0.95) 100%);
+  z-index: 1;
+}
+
+.hero-slider-container {
   position: relative;
   z-index: 2;
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 3rem;
-  align-items: center;
+  width: 100%;
 }
 
-/* Sol Kolon */
-.hero-luxury-content {
+.hero-slider-content {
+  max-width: 780px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -42,9 +59,9 @@
   align-items: center;
   gap: 0.6rem;
   padding: 0.45rem 1.1rem;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-full);
   color: var(--white);
   font-size: 0.875rem;
@@ -53,40 +70,43 @@
 }
 
 .badge-gold-icon {
-  color: #f59e0b;
+  color: var(--accent);
 }
 
 .hero-serif-title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 3.6rem;
+  font-size: 4rem;
   font-weight: 700;
   color: var(--white);
   line-height: 1.12;
   letter-spacing: -0.02em;
   margin-bottom: 1.5rem;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
 }
 
 .hero-serif-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   color: #cbd5e1;
   line-height: 1.65;
   margin-bottom: 2.5rem;
+  max-width: 680px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .hero-action-buttons {
   display: flex;
   align-items: center;
   gap: 1.25rem;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
   flex-wrap: wrap;
 }
 
 .btn-leather {
   background-color: #85532b;
   color: var(--white);
-  padding: 1rem 2rem;
+  padding: 1.05rem 2.2rem;
   border-radius: 12px;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   box-shadow: 0 6px 20px rgba(133, 83, 43, 0.4);
 }
@@ -97,18 +117,18 @@
 }
 
 .btn-glass-whatsapp {
-  background: rgba(37, 211, 102, 0.15);
+  background: rgba(37, 211, 102, 0.18);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(37, 211, 102, 0.35);
+  border: 1px solid rgba(37, 211, 102, 0.4);
   color: var(--white);
-  padding: 1rem 1.75rem;
+  padding: 1.05rem 1.8rem;
   border-radius: 12px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
 .btn-glass-whatsapp:hover {
-  background: rgba(37, 211, 102, 0.3);
+  background: rgba(37, 211, 102, 0.35);
   border-color: #25d366;
 }
 
@@ -117,7 +137,7 @@
   align-items: center;
   gap: 2rem;
   padding-top: 1.75rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   width: 100%;
 }
 
@@ -125,236 +145,92 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #cbd5e1;
-  font-size: 0.9rem;
+  color: #e2e8f0;
+  font-size: 0.95rem;
   font-weight: 600;
 }
 
 .highlight-tag svg {
-  color: #f59e0b;
+  color: var(--accent);
 }
 
-/* ==========================================================================
-   CANLI ETKİLEŞİMLİ METAL FERMUAR ANİMASYONU STİLLERİ
-   ========================================================================== */
-
-.hero-zipper-interactive-wrapper {
+/* SLİDER GEÇİŞ KONTROLLERİ (Sağ Alt Köşe) */
+.slider-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
   display: flex;
-  justify-content: center;
-}
-
-.zipper-interactive-card {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-  background: rgba(30, 41, 59, 0.85);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: var(--radius-lg);
-  padding: 1.5rem;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  text-align: center;
-}
-
-/* Toggle Butonu */
-.zipper-toggle-btn {
-  display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.6rem 1.4rem;
-  background: linear-gradient(135deg, #85532b 0%, #a16207 100%);
+  gap: 1.25rem;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.slider-arrows {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.slider-arrow-btn {
+  background: rgba(255, 255, 255, 0.15);
   color: var(--white);
   border: none;
+  width: 34px;
+  height: 34px;
   border-radius: var(--radius-full);
-  font-weight: 700;
-  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(133, 83, 43, 0.4);
-  margin-bottom: 1.5rem;
   transition: var(--transition-fast);
 }
 
-.zipper-toggle-btn:hover {
-  transform: scale(1.05);
+.slider-arrow-btn:hover {
+  background: var(--primary);
+  transform: scale(1.1);
 }
 
-.play-icon.active {
-  transform: rotate(90deg);
-  transition: transform 0.3s ease;
-}
-
-/* Metal Fermuar Sahnesi */
-.zipper-stage {
-  position: relative;
-  height: 380px;
-  background: #0b1120;
-  border-radius: var(--radius-md);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  overflow: hidden;
+.slider-dots {
   display: flex;
-  justify-content: center;
-}
-
-/* Diş Yolları */
-.zipper-track {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 32px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 2;
-}
-
-.track-left {
-  left: calc(50% - 32px);
-}
-
-.track-right {
-  right: calc(50% - 32px);
-}
-
-/* Dişler (Metal Teeth) */
-.metal-tooth {
-  height: 14px;
-  width: 28px;
-  background: linear-gradient(135deg, #d4af37 0%, #aa7c11 50%, #fef08a 100%);
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-}
-
-.tooth-left {
-  margin-left: auto;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-
-.tooth-right {
-  margin-right: auto;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-}
-
-/* Fermuar Açık/Kapalı Durum Hareketleri */
-.zipper-stage.open .track-left {
-  transform: translateX(-55px) rotate(-6deg);
-}
-
-.zipper-stage.open .track-right {
-  transform: translateX(55px) rotate(6deg);
-}
-
-/* Fermuar Kürsörü & Elciği (Pull Tab) */
-.zipper-slider-pull {
-  position: absolute;
-  top: 40px;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  gap: 0.4rem;
+}
+
+.slider-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.35);
   cursor: pointer;
-  transition: top 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-fast);
 }
 
-.zipper-stage.open .zipper-slider-pull {
-  top: 260px; /* Açıldığında kürsör aşağı kayar! */
+.slider-dot.active {
+  width: 24px;
+  background: #85532b;
 }
 
-.slider-head {
-  width: 48px;
-  height: 40px;
-  background: linear-gradient(180deg, #eab308 0%, #854d0e 100%);
-  border-radius: 10px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-weight: 800;
-  font-size: 1.2rem;
-  border: 1px solid #fef08a;
-}
-
-.slider-pull-tab {
-  width: 36px;
-  height: 70px;
-  background: linear-gradient(180deg, #d97706 0%, #78350f 100%);
-  border-radius: 6px;
-  margin-top: -6px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #fde047;
-}
-
-.slider-pull-tab span {
-  writing-mode: vertical-rl;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.15em;
-  color: #fff;
-}
-
-/* Fermuar Açılınca Ortaya Çıkan İçerik */
-.zipper-revealed-content {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: radial-gradient(circle, rgba(133, 83, 43, 0.3) 0%, rgba(11, 17, 32, 0.95) 100%);
-  padding: 1.5rem;
-  color: #fff;
-  opacity: 0;
-  transition: opacity 0.5s ease 0.2s;
-  z-index: 1;
-}
-
-.zipper-stage.open .zipper-revealed-content {
-  opacity: 1;
-}
-
-.revealed-badge {
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  color: #f59e0b;
-  margin-bottom: 0.4rem;
-}
-
-.zipper-revealed-content h4 {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.6rem;
-  color: #fff;
-  margin-bottom: 0.25rem;
-}
-
-.zipper-revealed-content p {
-  font-size: 0.85rem;
-  color: #cbd5e1;
-}
-
-.zipper-hint-text {
+.slider-caption-tag {
   font-size: 0.8rem;
-  color: #94a3b8;
-  margin-top: 0.85rem;
+  color: #cbd5e1;
+  font-weight: 500;
 }
 
 @media (max-width: 992px) {
-  .hero-zipper-section .hero-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .hero-luxury-content {
-    align-items: center;
-  }
-
   .hero-serif-title {
-    font-size: 2.6rem;
+    font-size: 2.8rem;
+  }
+
+  .slider-controls {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 2rem;
+    justify-content: center;
   }
 }
