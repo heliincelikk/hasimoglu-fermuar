@@ -42,8 +42,8 @@ export default function Navbar() {
         {/* Masaüstü Menü Linkleri */}
         <nav className="desktop-nav">
           <a href="#hero" className="nav-link">Ana Sayfa</a>
-          <a href="#services" className="nav-link">Ürünlerimiz</a>
           <a href="#about" className="nav-link">Hakkımızda</a>
+          <a href="#services" className="nav-link">Ürünlerimiz</a>
           <a href="#features" className="nav-link">Neden Biz?</a>
           <a href="#contact" className="nav-link">İletişim</a>
         </nav>
