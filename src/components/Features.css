@@ -1,44 +1,47 @@
-/* Features Section Styles */
+/* Features Section Styles - Dark Glass Theme */
 .features-section {
-  background-color: var(--bg-section-alt);
+  background-color: var(--dark-bg);
+  position: relative;
+  overflow: hidden;
 }
 
 .feature-card {
-  background-color: var(--gray-50);
-  border: 1px solid var(--gray-200);
+  background: var(--dark-card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
-  padding: 2rem 1.5rem;
+  padding: 2.25rem 1.5rem;
   text-align: center;
   transition: var(--transition-normal);
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--primary);
-  background-color: var(--white);
+  background: var(--dark-card-hover);
+  border-color: var(--glass-border-hover);
+  box-shadow: var(--shadow-lg);
 }
 
 .feature-icon-box {
   width: 64px;
   height: 64px;
   margin: 0 auto 1.25rem auto;
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--gray-200);
+  border: 1px solid var(--glass-border);
   transition: var(--transition-normal);
 }
 
 .feature-card:hover .feature-icon-box {
-  background: var(--primary);
+  background: var(--leather);
+  border-color: var(--accent);
 }
 
 .feature-card-icon {
-  color: var(--primary);
+  color: var(--accent);
   transition: var(--transition-normal);
 }
 
@@ -49,11 +52,11 @@
 .feature-card-title {
   font-size: 1.15rem;
   margin-bottom: 0.65rem;
-  color: var(--dark);
+  color: var(--text-main);
 }
 
 .feature-card-desc {
   font-size: 0.9rem;
-  color: var(--gray-600);
+  color: var(--text-muted);
   line-height: 1.5;
 }

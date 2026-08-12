@@ -1,39 +1,34 @@
 /* ==========================================================================
-   DESIGN SYSTEM & CORE STYLES - HAŞIMOĞLU FERMUAR (YUMUŞAK VE GÖZ YORMAYAN TEMA)
+   DESIGN SYSTEM & CORE STYLES - HAŞIMOĞLU FERMUAR (DYNAMİK MESH DARK GLASSMODE)
    ========================================================================== */
 
 :root {
-  /* Göz Yormayan Yumuşak Renk Paleti (Soft Warm Linen & Leather Theme) */
-  --primary: #1e3a8a;          /* Derin Lacivert */
-  --primary-hover: #2563eb;    /* Canlı Mavi */
-  --primary-light: #eff6ff;    /* Açık Mavi Arka Plan */
-  --leather: #85532b;          /* Şık Taba / Deri Rengi */
-  --accent: #d97706;           /* Sıcak Kehribar */
+  /* Renk Paleti (Sleek Dark Glass Mode - 0% Göz Yorma, %100 Lüks) */
+  --primary: #2563eb;          /* Canlı Mavi Vurgu */
+  --primary-hover: #3b82f6;
+  --primary-light: rgba(37, 99, 235, 0.15);
+  --leather: #d97706;          /* Sıcak Taba / Deri Rengi */
+  --accent: #f59e0b;           /* Parlak Kehribar */
   --accent-hover: #b45309;
   
-  --dark: #1e293b;             /* Yumuşak Koyu Kömür Grisi (Siyah Kadar Sert Değil) */
-  --dark-surface: #0f172a;
-  --gray-900: #1e293b;
-  --gray-800: #334155;
-  --gray-700: #475569;
-  --gray-600: #64748b;
-  --gray-500: #94a3b8;
-  --gray-300: #cbd5e1;
-  --gray-200: #e2e8f0;
-  --gray-100: #f1f5f9;
+  --dark-bg: #0b1120;          /* Gece Koyu Zemin */
+  --dark-surface: #0f172a;     /* İkinci Seviye Zemin */
+  --dark-card: rgba(30, 41, 59, 0.75); /* Cam Yüzey Kartı */
+  --dark-card-hover: rgba(30, 41, 59, 0.95);
   
-  /* Yumuşak, Göz Yormayan Arka Plan Renkleri (Sert Beyaz Yerin Yumuşak Krem/Keten) */
-  --bg-main: #f6f5f0;          /* Sıcak Krem/Keten Tonu */
-  --bg-card: #ffffff;          /* Kart Yüzeyleri */
-  --bg-section-alt: #ebe9e1;   /* Alternatif Yumuşak Bölüm Rengi */
-  --white: #ffffff;
+  --text-main: #f8fafc;        /* Metin Rengi (Mat Beyaz) */
+  --text-muted: #94a3b8;       /* İkincil Metin Rengi (Yumuşak Gri) */
+  --text-dim: #64748b;
 
-  /* Gölgeler ve Kenarlıklar */
-  --border-soft: #e2e0d8;
-  --glass-bg: rgba(246, 245, 240, 0.92);
-  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.03);
-  --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
-  --shadow-lg: 0 20px 35px -10px rgba(30, 41, 59, 0.08);
+  /* Cam Efekti & Gölgeler */
+  --glass-bg: rgba(15, 23, 42, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-border-hover: rgba(217, 119, 6, 0.35);
+  
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 20px 40px -10px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 25px rgba(217, 119, 6, 0.2);
 
   /* Fontlar ve Geçişler */
   --font-heading: 'Outfit', sans-serif;
@@ -60,8 +55,8 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: var(--bg-main);
-  color: var(--gray-800);
+  background-color: var(--dark-bg);
+  color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -69,7 +64,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  color: var(--dark);
+  color: var(--text-main);
   font-weight: 700;
   line-height: 1.25;
 }
@@ -93,7 +88,8 @@ button, input, textarea, select {
 }
 
 .section-padding {
-  padding: 5rem 0;
+  padding: 5.5rem 0;
+  position: relative;
 }
 
 @media (max-width: 768px) {
@@ -107,37 +103,42 @@ button, input, textarea, select {
   text-align: center;
   max-width: 700px;
   margin: 0 auto 3.5rem auto;
+  position: relative;
+  z-index: 2;
 }
 
 .section-tag {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.4rem 1rem;
-  background-color: rgba(30, 58, 138, 0.08);
-  color: var(--primary);
+  padding: 0.45rem 1.1rem;
+  background: rgba(217, 119, 6, 0.15);
+  border: 1px solid rgba(217, 119, 6, 0.3);
+  color: var(--accent);
   border-radius: var(--radius-full);
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: 0.85rem;
+  font-weight: 700;
   margin-bottom: 1rem;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .section-title {
   font-size: 2.5rem;
-  color: var(--dark);
+  color: var(--text-main);
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
 }
 
 .section-title span {
-  color: var(--leather);
+  background: linear-gradient(135deg, var(--accent) 0%, #fef08a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .section-subtitle {
   font-size: 1.125rem;
-  color: var(--gray-600);
+  color: var(--text-muted);
 }
 
 @media (max-width: 768px) {
@@ -162,55 +163,58 @@ button, input, textarea, select {
 }
 
 .btn-primary {
-  background: var(--primary);
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
   color: var(--white);
-  box-shadow: 0 4px 14px rgba(30, 58, 138, 0.25);
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35);
 }
 
 .btn-primary:hover {
-  background: var(--primary-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(30, 58, 138, 0.35);
+  box-shadow: 0 6px 22px rgba(37, 99, 235, 0.5);
 }
 
 .btn-secondary {
-  background-color: var(--white);
-  color: var(--dark);
-  border: 1px solid var(--border-soft);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  color: var(--text-main);
+  border: 1px solid var(--glass-border);
   box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary:hover {
-  background-color: var(--gray-100);
-  border-color: var(--gray-300);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--glass-border-hover);
   transform: translateY(-2px);
 }
 
 .btn-whatsapp {
   background-color: #25d366;
   color: var(--white);
-  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
 }
 
 .btn-whatsapp:hover {
   background-color: #20ba5a;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.5);
 }
 
-/* Kart Stilleri */
+/* Cam Kart Stilleri (Glassmorphism Card) */
 .card {
-  background: var(--white);
+  background: var(--dark-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--border-soft);
-  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-md);
   transition: var(--transition-normal);
 }
 
 .card:hover {
   transform: translateY(-5px);
+  background: var(--dark-card-hover);
+  border-color: var(--glass-border-hover);
   box-shadow: var(--shadow-lg);
-  border-color: rgba(133, 83, 43, 0.3);
 }
 
 /* Grid Yapıları */
@@ -244,12 +248,36 @@ button, input, textarea, select {
   }
 }
 
-/* Özel Animasyonlar */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(15px); }
-  to { opacity: 1; transform: translateY(0); }
+/* HAREKETLİ CANLI ARKA PLAN AMBİYANS BALONCUKLARI (ANIMATED ORBS) */
+@keyframes floatOrb1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(60px, -40px) scale(1.15); }
 }
 
-.fade-in {
-  animation: fadeIn 0.6s ease forwards;
+@keyframes floatOrb2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-50px, 50px) scale(1.1); }
+}
+
+.ambient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.orb-gold {
+  width: 450px;
+  height: 450px;
+  background: #d97706;
+  animation: floatOrb1 14s infinite ease-in-out;
+}
+
+.orb-blue {
+  width: 500px;
+  height: 500px;
+  background: #1e3a8a;
+  animation: floatOrb2 16s infinite ease-in-out;
 }

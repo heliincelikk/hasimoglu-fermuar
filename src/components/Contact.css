@@ -1,6 +1,8 @@
-/* Contact Section Styles (Formsız Sade Yapı) */
+/* Contact Section Styles - Dark Glass Theme */
 .contact-section {
-  background-color: var(--gray-50);
+  background-color: var(--dark-surface);
+  position: relative;
+  overflow: hidden;
 }
 
 .contact-cards-grid {
@@ -8,11 +10,12 @@
 }
 
 .contact-direct-card {
-  background: var(--white);
+  background: var(--dark-card);
+  backdrop-filter: blur(16px);
   padding: 1.75rem;
   border-radius: var(--radius-lg);
-  border: 1px solid var(--gray-200);
-  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-md);
   display: flex;
   align-items: flex-start;
   gap: 1.25rem;
@@ -21,17 +24,19 @@
 
 .contact-direct-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--primary);
+  background: var(--dark-card-hover);
+  border-color: var(--glass-border-hover);
+  box-shadow: var(--shadow-lg);
 }
 
 .whatsapp-card-border {
   border-color: rgba(37, 211, 102, 0.4);
-  background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+  background: rgba(37, 211, 102, 0.08);
 }
 
 .whatsapp-card-border:hover {
   border-color: #25d366;
+  background: rgba(37, 211, 102, 0.15);
 }
 
 .contact-icon-box {
@@ -45,23 +50,23 @@
 }
 
 .phone-icon {
-  background-color: var(--primary-light);
-  color: var(--primary);
+  background: rgba(37, 99, 235, 0.2);
+  color: #60a5fa;
 }
 
 .whatsapp-icon-box {
-  background-color: rgba(37, 211, 102, 0.15);
+  background: rgba(37, 211, 102, 0.2);
   color: #25d366;
 }
 
 .map-pin-icon-box {
-  background-color: #fef3c7;
-  color: #d97706;
+  background: rgba(217, 119, 6, 0.2);
+  color: var(--accent);
 }
 
 .clock-icon-box {
-  background-color: #f1f5f9;
-  color: var(--gray-700);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-main);
 }
 
 .contact-card-text {
@@ -71,49 +76,49 @@
 
 .contact-card-text h4 {
   font-size: 1.1rem;
-  color: var(--dark);
+  color: var(--text-main);
   margin-bottom: 0.35rem;
 }
 
 .contact-primary-link {
   font-size: 1.15rem;
   font-weight: 700;
-  color: var(--primary);
+  color: var(--accent);
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
 }
 
 .contact-primary-link:hover {
-  color: var(--primary-hover);
+  color: var(--white);
   text-decoration: underline;
 }
 
 .contact-whatsapp-link {
   font-size: 1.15rem;
   font-weight: 700;
-  color: #16a34a;
+  color: #4ade80;
 }
 
 .contact-whatsapp-link:hover {
-  color: #15803d;
+  color: #22c55e;
   text-decoration: underline;
 }
 
 .contact-highlight-text {
   font-size: 1rem;
   font-weight: 600;
-  color: var(--dark);
+  color: var(--text-main);
 }
 
 .contact-sub-text {
   font-size: 0.875rem;
-  color: var(--gray-500);
+  color: var(--text-muted);
   margin-top: 0.35rem;
 }
 
 .contact-sub-text a {
-  color: var(--primary);
+  color: var(--accent);
   font-weight: 600;
 }
 
@@ -121,9 +126,9 @@
 .map-wrapper {
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--gray-200);
-  background-color: var(--white);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--glass-border);
+  background-color: var(--dark-bg);
 }
 
 .map-header-bar {
@@ -131,10 +136,11 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.25rem 1.75rem;
-  background-color: var(--dark);
-  color: var(--white);
+  background-color: #0b1120;
+  color: var(--text-main);
   flex-wrap: wrap;
   gap: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .map-header-title {
@@ -164,7 +170,7 @@
   position: absolute;
   bottom: 20px;
   right: 20px;
-  background: var(--dark);
+  background: var(--dark-surface);
   color: var(--white);
   padding: 0.5rem 1rem;
   border-radius: var(--radius-full);
@@ -172,12 +178,13 @@
   font-weight: 600;
   box-shadow: var(--shadow-md);
   opacity: 0.9;
+  border: 1px solid var(--glass-border);
   transition: var(--transition-fast);
 }
 
 .map-iframe-container:hover::after {
   opacity: 1;
-  background: var(--primary);
+  background: var(--leather);
 }
 
 @media (max-width: 768px) {
