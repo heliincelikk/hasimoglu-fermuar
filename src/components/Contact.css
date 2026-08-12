@@ -1,4 +1,4 @@
-/* Contact Section Styles - Warm Cream Theme */
+/* Contact Section Styles - #F4F4F4 & #FDFDFD */
 .contact-section {
   background-color: var(--bg-section);
   position: relative;
@@ -10,7 +10,7 @@
 }
 
 .contact-direct-card {
-  background: #ffffff;
+  background: #FDFDFD;
   padding: 1.75rem;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-soft);
@@ -29,7 +29,7 @@
 
 .whatsapp-card-border {
   border-color: rgba(37, 211, 102, 0.4);
-  background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+  background: linear-gradient(180deg, #FDFDFD 0%, #f0fdf4 100%);
 }
 
 .whatsapp-card-border:hover {
@@ -124,8 +124,8 @@
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-md);
-  border: 4px solid #ffffff;
-  background-color: #ffffff;
+  border: 4px solid #FDFDFD;
+  background-color: #FDFDFD;
 }
 
 .map-header-bar {
@@ -133,7 +133,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.25rem 1.75rem;
-  background-color: #2a2421;
+  background-color: #222222;
   color: #ffffff;
   flex-wrap: wrap;
   gap: 1rem;
@@ -166,7 +166,7 @@
   position: absolute;
   bottom: 20px;
   right: 20px;
-  background: #2a2421;
+  background: #222222;
   color: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: var(--radius-full);

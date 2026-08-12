@@ -1,4 +1,4 @@
-/* Features Section Styles - Warm Cream Theme */
+/* Features Section Styles - #F5F5F5 & #FDFDFD */
 .features-section {
   background-color: var(--bg-main);
   position: relative;
@@ -6,7 +6,7 @@
 }
 
 .feature-card {
-  background: #ffffff;
+  background: #FDFDFD;
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
   padding: 2.25rem 1.5rem;
