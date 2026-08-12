@@ -1,0 +1,180 @@
+/* Hero Luxury Section Styles (Referans Tasarıma Özel) */
+.hero-luxury-section {
+  position: relative;
+  min-height: 80vh;
+  padding-top: 9.5rem;
+  padding-bottom: 6rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--dark);
+}
+
+/* Arka Plan Görseli */
+.hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(0.65) contrast(1.1);
+}
+
+/* Koyu Karartma Katmanı */
+.hero-dark-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.82) 0%, rgba(15, 23, 42, 0.65) 50%, rgba(15, 23, 42, 0.95) 100%);
+  z-index: 1;
+}
+
+.hero-container-centered {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-luxury-content {
+  max-width: 780px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Üst Altın Rozet */
+.hero-top-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 1.1rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+  color: var(--white);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.badge-gold-icon {
+  color: var(--accent);
+}
+
+/* Görseldeki Serif Başlık (Playfair Display) */
+.hero-serif-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Alt Açıklama Metni */
+.hero-serif-subtitle {
+  font-size: 1.25rem;
+  color: #cbd5e1;
+  line-height: 1.65;
+  margin-bottom: 2.5rem;
+  max-width: 680px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Buton Grubu */
+.hero-action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+}
+
+/* Görseldeki Taba / Deri Buton */
+.btn-leather {
+  background-color: #85532b;
+  color: var(--white);
+  padding: 1.05rem 2.2rem;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  box-shadow: 0 6px 20px rgba(133, 83, 43, 0.4);
+  border: none;
+}
+
+.btn-leather:hover {
+  background-color: #6e4321;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(133, 83, 43, 0.55);
+}
+
+/* WhatsApp Cam Buton */
+.btn-glass-whatsapp {
+  background: rgba(37, 211, 102, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(37, 211, 102, 0.4);
+  color: var(--white);
+  padding: 1.05rem 1.8rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.btn-glass-whatsapp:hover {
+  background: rgba(37, 211, 102, 0.35);
+  border-color: #25d366;
+  transform: translateY(-2px);
+}
+
+/* Alt Öne Çıkan Rozet Şeridi */
+.hero-bottom-highlights {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  width: 100%;
+}
+
+.highlight-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.highlight-tag svg {
+  color: var(--accent);
+}
+
+@media (max-width: 992px) {
+  .hero-serif-title {
+    font-size: 2.8rem;
+  }
+
+  .hero-serif-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-bottom-highlights {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-serif-title {
+    font-size: 2.2rem;
+  }
+
+  .btn-leather, .btn-glass-whatsapp {
+    width: 100%;
+  }
+}
