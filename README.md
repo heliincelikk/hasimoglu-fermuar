@@ -23,19 +23,6 @@ Bu proje, **Haşımoğlu Fermuar (20 Yıllık Üstün Kalite İmalat)** dükkan�
 
 ---
 
-## 🚀 Projeyi Yerelde Çalıştırma
-
-```bash
-# Bağımlılıkları yükleyin
-npm install
-
-# Geliştirici sunucusunu başlatın
-npm run dev
-```
-
-Sayfayı görüntülemek için tarayıcınızda `http://localhost:5173/` adresini açın.
-
----
 
 ## 📍 İletişim Bilgileri
 
