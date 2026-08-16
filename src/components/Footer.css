@@ -1,4 +1,4 @@
-/* Footer Styles */
+﻿/* Footer Styles */
 .footer {
   background-color: var(--dark);
   color: var(--gray-400);
@@ -125,7 +125,7 @@
   height: 40px;
   background-color: var(--dark-surface);
   color: var(--white);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-soft);
   border-radius: var(--radius-full);
   display: flex;
   align-items: center;

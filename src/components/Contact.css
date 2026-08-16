@@ -1,4 +1,4 @@
-/* Contact Section Styles - Mat Grafit #23272A */
+﻿/* Contact Section Styles - Mat Grafit var(--bg-main) */
 .contact-section {
   background-color: var(--bg-section);
   position: relative;
@@ -10,10 +10,10 @@
 }
 
 .contact-direct-card {
-  background: #2c2f33;
+  background: var(--bg-card);
   padding: 1.75rem;
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-soft);
   box-shadow: var(--shadow-sm);
   display: flex;
   align-items: flex-start;
@@ -62,8 +62,8 @@
 }
 
 .clock-icon-box {
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  background: var(--border-soft);
+  color: var(--text-main);
 }
 
 .contact-card-text {
@@ -73,7 +73,7 @@
 
 .contact-card-text h4 {
   font-size: 1.1rem;
-  color: #ffffff;
+  color: var(--text-main);
   margin-bottom: 0.35rem;
 }
 
@@ -87,7 +87,7 @@
 }
 
 .contact-primary-link:hover {
-  color: #ffffff;
+  color: var(--text-main);
   text-decoration: underline;
 }
 
@@ -105,7 +105,7 @@
 .contact-highlight-text {
   font-size: 1rem;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--text-main);
 }
 
 .contact-sub-text {
@@ -124,8 +124,8 @@
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-md);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: #23272A;
+  border: 1px solid var(--border-soft);
+  background-color: var(--bg-main);
 }
 
 .map-header-bar {
@@ -133,11 +133,11 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.25rem 1.75rem;
-  background-color: #1e2124;
-  color: #ffffff;
+  background-color: var(--bg-section);
+  color: var(--text-main);
   flex-wrap: wrap;
   gap: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--border-soft);
 }
 
 .map-header-title {
@@ -163,19 +163,19 @@
 }
 
 .map-iframe-container::after {
-  content: '📍 Haritada Açar';
+  content: 'ğŸ“ Haritada AÃ§ar';
   position: absolute;
   bottom: 20px;
   right: 20px;
-  background: #1e2124;
-  color: #ffffff;
+  background: var(--bg-section);
+  color: var(--text-main);
   padding: 0.5rem 1rem;
   border-radius: var(--radius-full);
   font-size: 0.85rem;
   font-weight: 600;
   box-shadow: var(--shadow-md);
   opacity: 0.9;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-soft);
   transition: var(--transition-fast);
 }
 

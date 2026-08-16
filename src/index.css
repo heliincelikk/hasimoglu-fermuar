@@ -3,14 +3,14 @@
    ========================================================================== */
 
 :root {
-  /* Kullanıcının Özel İstediği Mat Grafit Renk Paleti */
-  --bg-main: #23272A;          /* Mat Grafit Arka Plan (Sleek Dark Graphite) */
-  --bg-section: #1e2124;       /* İkincil Derin Grafit Bölüm Zemin */
-  --bg-card: #2c2f33;          /* Mat Grafit Kart Yüzeyi */
+  /* Kullanıcının Özel İstediği Açık/Krem Renk Paleti */
+  --bg-main: #fdfbf7;          /* Açık Krem Arka Plan */
+  --bg-section: #f5f3ef;       /* İkincil Yumuşak Krem Bölüm Zemin */
+  --bg-card: #ffffff;          /* Beyaz Kart Yüzeyi */
   
-  --text-main: #ffffff;        /* Net Parlak Beyaz Metin */
-  --text-muted: #99aab5;       /* Yumuşak Grafit Gri Metin */
-  --text-dim: #7289da;
+  --text-main: #2c241b;        /* Koyu Kahve/Siyah Metin */
+  --text-muted: #6b5c4f;       /* Yumuşak Kahve/Gri Metin */
+  --text-dim: #a89f91;
 
   --primary: #2563eb;          /* Canlı Lacivert */
   --primary-hover: #3b82f6;
@@ -18,12 +18,12 @@
   --accent: #f59e0b;           /* Parlak Kehribar */
 
   /* Gölgeler ve Kenarlıklar */
-  --border-soft: rgba(255, 255, 255, 0.1);
+  --border-soft: rgba(0, 0, 0, 0.08);
   --border-hover: rgba(217, 119, 6, 0.4);
   
-  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.45);
-  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.6);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.15);
 
   /* Fontlar ve Geçişler */
   --font-heading: 'Outfit', sans-serif;
