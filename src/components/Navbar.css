@@ -1,20 +1,20 @@
-/* Navbar Styles - Light Theme */
+/* Navbar Styles - Dark Granite Theme */
 .navbar-header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(17, 22, 27, 0.72);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+  border-bottom: 1px solid rgba(203, 213, 225, 0.12);
   box-shadow: none;
   transition: var(--transition-normal);
 }
 
 .navbar-header.scrolled {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(17, 22, 27, 0.96);
   border-bottom: 1px solid var(--border-soft);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
@@ -38,7 +38,7 @@
 .logo-badge {
   width: 44px;
   height: 44px;
-  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+  background: linear-gradient(135deg, #374151 0%, #4b5563 100%);
   color: #ffffff;
   border-radius: var(--radius-md);
   display: flex;
@@ -47,7 +47,7 @@
   font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 800;
-  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.35);
+  box-shadow: 0 4px 14px rgba(55, 65, 81, 0.3);
 }
 
 .logo-text {

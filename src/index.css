@@ -3,27 +3,27 @@
    ========================================================================== */
 
 :root {
-  /* Kullanıcının Özel İstediği Açık/Krem Renk Paleti */
-  --bg-main: #fdfbf7;          /* Açık Krem Arka Plan */
-  --bg-section: #f5f3ef;       /* İkincil Yumuşak Krem Bölüm Zemin */
-  --bg-card: #ffffff;          /* Beyaz Kart Yüzeyi */
-  
-  --text-main: #2c241b;        /* Koyu Kahve/Siyah Metin */
-  --text-muted: #6b5c4f;       /* Yumuşak Kahve/Gri Metin */
-  --text-dim: #a89f91;
+  /* Granit, siyah ve çelik palet */
+  --bg-main: #11161b;
+  --bg-section: #192027;
+  --bg-card: #222b34;
 
-  --primary: #2563eb;          /* Canlı Lacivert */
-  --primary-hover: #3b82f6;
-  --leather: #d97706;          /* Sıcak Taba / Deri Rengi */
-  --accent: #f59e0b;           /* Parlak Kehribar */
+  --text-main: #edf2f7;
+  --text-muted: #aeb8c2;
+  --text-dim: #778390;
+
+  --primary: #4b5563;          /* Granit */
+  --primary-hover: #374151;
+  --leather: #374151;          /* Koyu Granit */
+  --accent: #59636f;           /* Açık Granit */
 
   /* Gölgeler ve Kenarlıklar */
-  --border-soft: rgba(0, 0, 0, 0.08);
-  --border-hover: rgba(217, 119, 6, 0.4);
+  --border-soft: rgba(203, 213, 225, 0.14);
+  --border-hover: rgba(75, 85, 99, 0.4);
   
-  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.15);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.22);
+  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.4);
 
   /* Fontlar ve Geçişler */
   --font-heading: 'Outfit', sans-serif;
@@ -107,8 +107,8 @@ button, input, textarea, select {
   align-items: center;
   gap: 0.5rem;
   padding: 0.45rem 1.1rem;
-  background-color: rgba(217, 119, 6, 0.15);
-  border: 1px solid rgba(217, 119, 6, 0.3);
+  background-color: rgba(75, 85, 99, 0.12);
+  border: 1px solid rgba(75, 85, 99, 0.28);
   color: var(--accent);
   border-radius: var(--radius-full);
   font-size: 0.85rem;
@@ -158,13 +158,13 @@ button, input, textarea, select {
 .btn-primary {
   background: var(--leather);
   color: #ffffff;
-  box-shadow: 0 4px 16px rgba(217, 119, 6, 0.35);
+  box-shadow: 0 4px 16px rgba(55, 65, 81, 0.28);
 }
 
 .btn-primary:hover {
-  background: #b45309;
+  background: #1f2937;
   transform: translateY(-2px);
-  box-shadow: 0 6px 22px rgba(217, 119, 6, 0.5);
+  box-shadow: 0 6px 22px rgba(55, 65, 81, 0.4);
 }
 
 .btn-secondary {
@@ -175,7 +175,7 @@ button, input, textarea, select {
 }
 
 .btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.08);
   border-color: var(--border-hover);
   transform: translateY(-2px);
 }

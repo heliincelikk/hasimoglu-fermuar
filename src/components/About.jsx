@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, Award, Users, Briefcase } from 'lucide-react';
+import { CheckCircle, Award, Users } from 'lucide-react';
 import { siteInfo } from '../data/siteData';
 import storeImg from '../assets/store.jpg';
 import './About.css';
@@ -60,12 +60,6 @@ export default function About() {
                 <Users size={24} className="stat-icon" />
                 <span className="stat-number">{about.happyClients}</span>
                 <span className="stat-label">Mutlu Müşteri</span>
-              </div>
-
-              <div className="stat-card">
-                <Briefcase size={24} className="stat-icon" />
-                <span className="stat-number">{about.projectsCompleted}</span>
-                <span className="stat-label">Tamamlanan İş</span>
               </div>
 
               <div className="stat-card">

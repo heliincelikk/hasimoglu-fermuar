@@ -1,6 +1,6 @@
 ﻿/* Testimonials Section Styles */
 .testimonials-section {
-  background-color: var(--white);
+  background-color: var(--bg-main);
 }
 
 .testimonial-card {
@@ -12,7 +12,7 @@
 }
 
 .quote-icon {
-  color: var(--primary-light);
+  color: var(--accent);
   margin-bottom: 1rem;
 }
 
@@ -29,7 +29,7 @@
 
 .testimonial-comment {
   font-size: 0.975rem;
-  color: var(--gray-700);
+  color: var(--text-muted);
   line-height: 1.6;
   font-style: italic;
   margin-bottom: 1.75rem;
@@ -40,7 +40,7 @@
   display: flex;
   align-items: center;
   gap: 0.85rem;
-  border-top: 1px solid var(--gray-100);
+  border-top: 1px solid var(--border-soft);
   padding-top: 1rem;
 }
 
@@ -59,10 +59,10 @@
 
 .author-name {
   font-size: 1rem;
-  color: var(--dark);
+  color: var(--text-main);
 }
 
 .author-role {
   font-size: 0.8rem;
-  color: var(--gray-500);
+  color: var(--text-dim);
 }

@@ -1,3 +1,9 @@
+import slide1 from '../assets/slide1.jpg';
+import slide2 from '../assets/slide2.png';
+import slide3 from '../assets/slide3.png';
+import slide4 from '../assets/slide4.png';
+import slide5 from '../assets/slide5.png';
+
 /**
  * HAŞIMOĞLU FERMUAR - SİTE VERİLERİ (siteData.js)
  * 
@@ -18,12 +24,11 @@ export const siteInfo = {
     description2: "Kendi imalatımız olan dayanıklı, takılmayan ve uzun ömürlü fermuarlarımızla hem üreticilerin hem de perakende müşterilerimizin çözüm ortağıyız. İstenilen boy, renk ve çeşide göre özel üretim yapıyoruz.",
     experienceYears: "20+",
     happyClients: "3000+",
-    projectsCompleted: "10M+",
   },
   contact: {
     phone: "+90 (532) 583 08 32",
     whatsapp: "905325830832",
-    email: "helincelik3403@email.com",
+    email: "fadil.celik@hotmail.com",
     address: "Yıldırım, 100. Yıl Cd 9/a,34000,Bayrampaşa-İstanbul",
     workingHours: "Hafta İçi: 08:30 - 18:30 | Cumartesi: 09:00 - 15:00",
     closedDays: "Pazar: Kapalı",
@@ -36,34 +41,82 @@ export const productsData = [
   {
     id: 1,
     title: "Metal Fermuarlar",
-    description: "Mont, deri ceket, kot ve ağır tekstil ürünleri için ekstra dayanıklı pirinç ve bakır dişli metal fermuarlar.",
+    description: "Mont, deri ceket, kot ve ağır tekstil ürünleri için sağlam metal dişli fermuarlar.",
     iconName: "Shield",
-    badge: "Heavy Duty",
-    image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80"
+    badge: "Sağlam ve Dayanıklı",
+    image: slide1
   },
   {
     id: 2,
     title: "Kemik Fermuarlar",
     description: "Spor giyim, kaban ve çocuk kıyafetlerine özel renk renk, hafif ve takılmayan kemik fermuarlar.",
     iconName: "Zap",
-    badge: "Sportswear",
-    image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80"
+    badge: "Renkli ve Hafif",
+    image: slide3
   },
   {
     id: 3,
-    title: "Gizli Fermuarlar",
-    description: "Abiye, etek ve elbiselerde dışarıdan görünmeyen, estetik ve pürüzsüz kayan gizli fermuarlar.",
-    iconName: "Scissors",
-    badge: "Couture",
-    image: "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?auto=format&fit=crop&w=800&q=80"
+    title: "Spiral Fermuarlar",
+    description: "Giyim, çanta ve ev tekstili ürünlerinde kullanılan esnek, hafif ve akıcı spiral dişli fermuarlar.",
+    iconName: "RefreshCw",
+    badge: "Esnek Kullanım",
+    image: slide5
   },
   {
     id: 4,
+    title: "Gizli Fermuarlar",
+    description: "Abiye, etek ve elbiselerde dışarıdan görünmeyen, estetik ve pürüzsüz kayan gizli fermuarlar.",
+    iconName: "Scissors",
+    badge: "Zarif ve İnce",
+    image: slide4
+  },
+  {
+    id: 5,
     title: "Su Geçirmez Fermuarlar",
-    description: "Çanta, teknik mont, outdoor ve genel tekstil ürünleri için su geçirmez ve esnek fermuarlar.",
+    description: "Teknik mont, yağmurluk, çanta ve dış mekân ürünleri için koruyucu kaplamalı fermuarlar.",
     iconName: "Layers",
-    badge: "Technical",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
+    badge: "Suya Karşı Koruma",
+    image: slide2
+  },
+  {
+    id: 6,
+    title: "Ayırmalı Fermuarlar",
+    description: "Mont, kaban, yelek ve sweatshirt gibi tamamen açılması gereken ürünlerde kullanılan fermuarlar.",
+    iconName: "PanelTopOpen",
+    badge: "Mont ve Kaban",
+    image: slide4
+  },
+  {
+    id: 7,
+    title: "Kapalı Uçlu Fermuarlar",
+    description: "Pantolon, etek, elbise, yastık ve cep gibi iki ucu sabit kalan ürünler için fermuarlar.",
+    iconName: "LockKeyhole",
+    badge: "Cep ve Giyim",
+    image: slide3
+  },
+  {
+    id: 8,
+    title: "İki Yönlü Fermuarlar",
+    description: "Çift yönden açılabilen; mont, tulum, çanta ve iş kıyafetlerinde kullanılan pratik fermuarlar.",
+    iconName: "ArrowDownUp",
+    badge: "Çift Yönlü",
+    image: slide1
+  },
+  {
+    id: 9,
+    title: "Çift Sürgülü Fermuarlar",
+    description: "Çantalar, valizler ve geniş açıklıklı ürünlerde iki sürgüyle kolay kullanım sağlayan fermuarlar.",
+    iconName: "MoveHorizontal",
+    badge: "Çanta ve Valiz",
+    image: slide4
+  },
+  {
+    id: 10,
+    title: "Ters Dişli Fermuarlar",
+    description: "Dişleri arka yüzde kalan; spor giyim, teknik ürün ve modern tasarımlarda kullanılan fermuarlar.",
+    iconName: "FlipHorizontal2",
+    badge: "Teknik Tasarım",
+    image: slide5
   }
 ];
 

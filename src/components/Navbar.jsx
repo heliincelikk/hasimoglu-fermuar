@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, Menu, X, ChevronRight, MessageSquare } from 'lucide-react';
+import { Menu, X, ChevronRight, MessageSquare } from 'lucide-react';
 import { siteInfo } from '../data/siteData';
 import './Navbar.css';
 

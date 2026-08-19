@@ -20,7 +20,7 @@
   align-items: stretch;
   transform: rotateX(8deg) rotateY(-18deg);
   transform-style: preserve-3d;
-  filter: drop-shadow(0 24px 48px rgba(146, 64, 14, 0.12));
+  filter: drop-shadow(0 24px 48px rgba(55, 65, 81, 0.14));
 }
 
 /* Kumaş panelleri */

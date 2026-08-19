@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, ChevronRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import { productsData } from '../data/siteData';
 import './Services.css';
 
@@ -8,7 +8,7 @@ import './Services.css';
  * 
  * Burada attığınız görseldeki gibi:
  * - Arka planda fermuar fotoğrafları,
- * - Üzerinde şık beyaz rozetler (Heavy Duty, Sportswear vb.),
+ * - Üzerinde ürün özelliğini anlatan Türkçe rozetler,
  * - Alt kısımda koyu degrade ve ürün isimleri yer alır.
  */
 export default function Services() {

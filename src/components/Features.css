@@ -17,7 +17,7 @@
 
 .feature-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(217, 119, 6, 0.4);
+  border-color: rgba(75, 85, 99, 0.4);
   box-shadow: var(--shadow-lg);
 }
 

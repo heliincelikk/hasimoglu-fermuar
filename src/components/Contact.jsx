@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Clock, MessageSquare, ExternalLink } from 'lucide-react';
+import { Phone, MapPin, Clock, MessageSquare, ExternalLink } from 'lucide-react';
 import { siteInfo } from '../data/siteData';
 import './Contact.css';
 
