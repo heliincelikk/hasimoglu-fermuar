@@ -38,7 +38,7 @@ export default function Gallery() {
   return (
     <section id="gallery" className="section-padding gallery-section">
       <div className="container">
-        <div className="section-header"><div className="section-tag">Fermuar İmalat Galerimiz</div><h2 className="section-title">Mağazamızdan <span>Kareler</span></h2><p className="section-subtitle">Fotoğrafa tıklayarak mağazamızı tam ekrana yakın boyutta inceleyin; yanına geçerek videoyu izleyin.</p></div>
+        <div className="section-header"><div className="section-tag">Fermuar İmalat Galerimiz</div><h2 className="section-title">Mağazamızdan <span>Kareler</span></h2></div>
         <div className="gallery-showcase">
           <button className="gallery-main-preview" onClick={() => show(0)} aria-label="Mağaza fotoğrafını büyük görüntüle"><img src={storeImage} alt="Haşimioğlu Fermuar mağazası" loading="lazy" /><span className="gallery-preview-overlay"><Maximize2 size={21} aria-hidden="true" /> Mağazayı Büyük Gör</span></button>
           <button className="gallery-video-preview" onClick={() => show(1)} aria-label="Mağaza videosunu görüntüle"><video muted playsInline preload="metadata" aria-hidden="true"><source src={showcaseVideo} type="video/mp4" /></video><span className="gallery-video-preview-overlay"><Play size={24} aria-hidden="true" /> Tanıtım Videosunu İzle</span></button>
