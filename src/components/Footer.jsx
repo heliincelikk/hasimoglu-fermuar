@@ -87,7 +87,7 @@ export default function Footer() {
           </p>
 
           <p className="dev-credit">
-            Fermuar İmalatı <Heart size={14} className="heart-icon" aria-hidden="true" /> Müteahhitlik
+            Fermuar İmalatı- Müteahhitlik
           </p>
 
           <button onClick={scrollToTop} className="scroll-to-top" aria-label="Yukarı Çık">
