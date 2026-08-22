@@ -507,10 +507,27 @@
     padding-left: 1.25rem;
   }
 
+  /*
+   * Kapak görseli yatay tasarlandı. Telefonda ekran yüksekliğine zorlamak,
+   * görselin ortasını aşırı kırpıyor ve marka adını kesiyordu. Kendi oranında
+   * göstererek hem fermuarı hem de yapıyı görünür tutuyoruz.
+   */
   .hero-group-cover { padding-top: 64px; }
-  .hero-group-cover .hero-group-art img { height: calc(100dvh - 64px); max-height: none; }
-  .hero-group-summary { padding: 1.5rem 0; }
-  .hero-group-story { font-size: 1.3rem; text-align: left; }
+
+  .hero-group-cover .hero-group-art {
+    aspect-ratio: 1376 / 768;
+    background: #0d1722;
+  }
+
+  .hero-group-cover .hero-group-art img {
+    height: auto;
+    max-height: none;
+    aspect-ratio: 1376 / 768;
+    object-fit: contain;
+  }
+
+  .hero-group-summary { padding: 2rem 0 2.25rem; }
+  .hero-group-story { font-size: clamp(1.1rem, 5vw, 1.3rem); line-height: 1.55; text-align: left; }
 
   .hero-cover-inner { align-content: end; padding-top: 0; padding-bottom: 6.5rem; }
   .hero-cover-copy { max-width: 100%; text-align: center; }

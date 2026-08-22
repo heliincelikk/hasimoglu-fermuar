@@ -88,8 +88,13 @@ button, input, textarea, select {
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
   .section-padding {
-    padding: 3.5rem 0;
+    padding: 3.25rem 0;
   }
 }
 
@@ -137,6 +142,14 @@ button, input, textarea, select {
 @media (max-width: 768px) {
   .section-title {
     font-size: 1.9rem;
+  }
+
+  .section-header {
+    margin-bottom: 2.25rem;
+  }
+
+  .btn {
+    min-height: 44px;
   }
 }
 
