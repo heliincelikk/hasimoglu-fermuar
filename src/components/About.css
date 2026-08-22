@@ -5,6 +5,10 @@
   overflow: hidden;
 }
 
+.about-section-header {
+  margin-bottom: 2.75rem;
+}
+
 .about-grid {
   align-items: center;
   position: relative;

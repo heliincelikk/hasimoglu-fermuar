@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, ArrowUp, Heart } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowUp, Heart, Factory, Building2 } from 'lucide-react';
 import { siteInfo } from '../data/siteData';
 import './Footer.css';
 
@@ -27,34 +27,34 @@ export default function Footer() {
               <span className="logo-title">{siteInfo.companyName}</span>
             </a>
             <p className="footer-about-text">
-              {siteInfo.subtitle}
+              Haşimioğlu Grup; fermuar imalatındaki köklü deneyimini, müteahhitlikteki modern ve titiz uygulama anlayışıyla bir araya getirir.
             </p>
             <p className="footer-tagline">
-              "Dürüst Hizmet, Yılların Güveni."
+              Üretimde kalite, yapılarda güven.
             </p>
           </div>
 
-          {/* Kolon 2 - Hızlı Bağlantılar */}
+          {/* Kolon 2 - Sayfa bağlantıları */}
           <div className="footer-col">
-            <h4 className="footer-col-title">Hızlı Bağlantılar</h4>
+            <h4 className="footer-col-title">Keşfedin</h4>
             <ul className="footer-links">
               <li><a href="#hero">Ana Sayfa</a></li>
-              <li><a href="#about">Hakkımızda</a></li>
-              <li><a href="#services">Hizmetlerimiz</a></li>
-              <li><a href="#gallery">Fotoğraf Galerisi</a></li>
+              <li><a href="#about">Fermuar İmalatımız</a></li>
+              <li><a href="#services">Fermuar Koleksiyonumuz</a></li>
+              <li><a href="#gallery">Fermuar Galerimiz</a></li>
+              <li><a href="#construction">Müteahhitlik</a></li>
               <li><a href="#contact">İletişim</a></li>
             </ul>
           </div>
 
-          {/* Kolon 3 - Hizmetler */}
+          {/* Kolon 3 - Hizmet alanları */}
           <div className="footer-col">
             <h4 className="footer-col-title">Hizmet Alanlarımız</h4>
             <ul className="footer-links">
-              <li><a href="#services">Kurumsal Danışmanlık</a></li>
-              <li><a href="#services">Kalite & Montaj</a></li>
-              <li><a href="#services">7/24 Destek & Bakım</a></li>
-              <li><a href="#services">Özel Projelendirme</a></li>
-              <li><a href="#services">Tedarik & Lojistik</a></li>
+              <li><a href="#about" className="footer-service-link"><Factory size={17} aria-hidden="true" /> Fermuar İmalatı</a></li>
+              <li><a href="#services">Fermuar Çeşitleri</a></li>
+              <li><a href="#construction" className="footer-service-link"><Building2 size={17} aria-hidden="true" /> Müteahhitlik Hizmetleri</a></li>
+              <li><a href="#construction">Projeler ve Fiyat Bilgisi</a></li>
             </ul>
           </div>
 
@@ -64,7 +64,9 @@ export default function Footer() {
             <ul className="footer-contact-list">
               <li>
                 <MapPin size={18} className="footer-icon" />
-                <span>{siteInfo.contact.address}</span>
+                <a href={siteInfo.contact.googleMapsLink} target="_blank" rel="noreferrer">
+                  {siteInfo.contact.address}
+                </a>
               </li>
               <li>
                 <Phone size={18} className="footer-icon" />
@@ -85,7 +87,7 @@ export default function Footer() {
           </p>
 
           <p className="dev-credit">
-            Sevgiyle <Heart size={14} className="heart-icon" /> Hazırlandı
+            Fermuar İmalatı <Heart size={14} className="heart-icon" aria-hidden="true" /> Müteahhitlik
           </p>
 
           <button onClick={scrollToTop} className="scroll-to-top" aria-label="Yukarı Çık">

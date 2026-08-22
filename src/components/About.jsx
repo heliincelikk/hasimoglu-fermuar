@@ -5,7 +5,7 @@ import storeImg from '../assets/store.jpg';
 import './About.css';
 
 /**
- * HAŞİMOĞLU FERMUAR - HAKKIMIZDA BİLEŞENİ (About.jsx)
+ * HAŞİMİOĞLU FERMUAR - HAKKIMIZDA BİLEŞENİ (About.jsx)
  * 
  * Babanızın Bayrampaşa'daki gerçek fermuar mağazasının fotoğrafı entegre edildi.
  */
@@ -15,13 +15,17 @@ export default function About() {
   return (
     <section id="about" className="section-padding about-section">
       <div className="container">
+        <div className="section-header about-section-header">
+          <div className="section-tag">Haşimioğlu Grup</div>
+          <h2 className="section-title">Fermuar <span>İmalatımız</span></h2>
+        </div>
         <div className="grid-2 about-grid">
           {/* Sol Kolon - Babanın Gerçek Mağaza Fotoğrafı ve 20 Yıl Deneyim Rozeti */}
           <div className="about-image-column">
             <div className="about-image-frame">
               <img 
                 src={storeImg} 
-                alt="Haşımoğlu Fermuar Bayrampaşa Mağazamız" 
+                alt="Haşimioğlu Fermuar Bayrampaşa Mağazamız"
                 className="about-img"
               />
               <div className="experience-badge">

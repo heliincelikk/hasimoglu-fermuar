@@ -91,6 +91,22 @@
   text-decoration: underline;
 }
 
+.contact-email-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: fit-content;
+  margin-top: 0.45rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
+
+.contact-email-link:hover {
+  color: var(--text-main);
+  text-decoration: underline;
+}
+
 .contact-whatsapp-link {
   font-size: 1.15rem;
   font-weight: 700;

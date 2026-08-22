@@ -1,130 +1,25 @@
-﻿/* Collection (Koleksiyon) Section Styles - Mat Grafit var(--bg-main) */
-.collection-section {
-  background-color: var(--bg-section);
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  position: relative;
-}
-
-.collection-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 2.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--border-soft);
-}
-
-.collection-main-title {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--text-main);
-  letter-spacing: -0.02em;
-}
-
-.view-all-link {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--accent);
-  transition: var(--transition-fast);
-}
-
-.view-all-link:hover {
-  color: var(--text-main);
-  gap: 0.5rem;
-}
-
-/* Ürün çeşitlerini daha kompakt ve taranabilir gösteren grid */
-.collection-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-
-/* FotoÄŸraflÄ± Koleksiyon KartÄ± */
-.collection-card {
-  position: relative;
-  height: 340px;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  border: 1px solid var(--border-soft);
-  cursor: pointer;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.4s ease;
-}
-
-.collection-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(75, 85, 99, 0.5);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
-}
-
-/* GÃ¶rsel */
-.collection-card-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.collection-card:hover .collection-card-img {
-  transform: scale(1.08);
-}
-
-/* Karartma ve Metin KatmanÄ± (Overlay) */
-.collection-card-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(35, 39, 42, 0.1) 20%, var(--bg-card) 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
-  padding: 1.75rem;
-}
-
-/* GÃ¶rseldeki Rozet */
-.collection-pill-badge {
-  background-color: var(--text-main);
-  color: var(--bg-main);
-  font-size: 0.9rem;
-  font-weight: 700;
-  padding: 0.45rem 1.1rem;
-  border-radius: var(--radius-sm);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  margin-bottom: 0.75rem;
-}
-
-/* Alt KÄ±sÄ±mdaki BaÅŸlÄ±k */
-.collection-card-title {
-  color: var(--text-main);
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  .collection-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .collection-card {
-    height: 260px;
-  }
-  
-  .collection-main-title {
-    font-size: 2rem;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1050px) {
-  .collection-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+.collection-section { background: var(--bg-section); }
+.collection-intro { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 2.75rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-soft); }
+.collection-intro .section-tag { margin-bottom: 0.8rem; }
+.collection-intro .section-title { margin: 0; }
+.collection-intro > p { max-width: 390px; color: var(--text-muted); font-size: 1.05rem; line-height: 1.6; }
+.collection-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+.collection-group { position: relative; display: flex; min-height: 300px; flex-direction: column; padding: 1.75rem; overflow: hidden; border: 1px solid var(--border-soft); border-radius: var(--radius-lg); background: var(--bg-card); transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease; }
+.collection-group::after { position: absolute; right: -30px; bottom: -40px; width: 190px; height: 190px; border: 1px solid var(--group-line); border-radius: 50%; content: ''; opacity: 0.55; }
+.collection-group-top, .collection-group-bottom { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.collection-group-label { color: var(--group-accent); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; }
+.collection-group-count { padding: 0.28rem 0.62rem; border: 1px solid var(--group-line); border-radius: var(--radius-full); color: var(--text-muted); font-size: 0.75rem; font-weight: 700; }
+.collection-group h3 { position: relative; z-index: 1; margin-top: 2rem; color: var(--text-main); font-size: clamp(1.65rem, 2.4vw, 2.1rem); line-height: 1.1; }
+.collection-group-summary { position: relative; z-index: 1; max-width: 380px; margin: 0.8rem 0 1.25rem; color: var(--text-muted); line-height: 1.55; }
+.collection-type-list { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 0.55rem; }
+.collection-type-list span { padding: 0.48rem 0.72rem; border: 1px solid var(--group-line); border-radius: 0.45rem; color: var(--text-main); font-size: 0.84rem; font-weight: 750; background: rgba(255,255,255,0.03); }
+.collection-group-bottom { margin-top: auto; padding-top: 1.75rem; color: var(--text-muted); font-size: 0.82rem; }
+.collection-group-bottom a { display: inline-flex; align-items: center; gap: 0.32rem; color: var(--group-accent); font-weight: 800; }
+.collection-group-bottom a:hover { color: var(--text-main); gap: 0.55rem; }
+.collection-group:hover { transform: translateY(-4px); border-color: var(--group-line); box-shadow: var(--shadow-md); }
+.collection-group:focus-within { outline: 3px solid var(--text-main); outline-offset: 4px; }
+.collection-group-nylon { --group-accent: #91b8e7; --group-line: rgba(111, 159, 211, 0.34); background: linear-gradient(135deg, rgba(50, 82, 117, 0.2), var(--bg-card) 58%); }
+.collection-group-invisible { --group-accent: #cfb5ce; --group-line: rgba(207, 181, 206, 0.3); background: linear-gradient(135deg, rgba(99, 71, 99, 0.2), var(--bg-card) 58%); }
+.collection-group-bone { --group-accent: #e1c993; --group-line: rgba(225, 201, 147, 0.3); background: linear-gradient(135deg, rgba(102, 82, 47, 0.22), var(--bg-card) 58%); }
+.collection-group-metal { --group-accent: #d1dce4; --group-line: rgba(209, 220, 228, 0.28); background: linear-gradient(135deg, rgba(79, 98, 111, 0.22), var(--bg-card) 58%); }
+@media (max-width: 760px) { .collection-intro { display: block; } .collection-intro > p { margin-top: 1rem; } .collection-groups { grid-template-columns: 1fr; } .collection-group { min-height: 280px; } }

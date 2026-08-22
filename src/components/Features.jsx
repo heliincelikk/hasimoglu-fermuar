@@ -15,7 +15,7 @@ export default function Features() {
         <div className="section-header">
           <div className="section-tag">Ayrıcalıklarımız</div>
           <h2 className="section-title">
-            Neden <span>Haşımoğlu</span>'nu Tercih Etmelisiniz?
+            Neden <span>Haşimioğlu</span>'nu Tercih Etmelisiniz?
           </h2>
           <p className="section-subtitle">
             Müşterilerimizin bizi tercih etmesindeki en büyük faktörler ve çalışma prensiplerimiz.

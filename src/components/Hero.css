@@ -41,6 +41,100 @@
   transform: scale(1);
 }
 
+/* Grup kapağındaki marka yazısı görselin parçasıdır; üzerinde arayüz metni yer almaz. */
+.hero-group-cover {
+  display: block;
+  min-height: 0;
+  padding-top: 72px;
+  overflow: visible;
+  background: var(--bg-main);
+}
+
+.hero-group-cover .hero-group-art {
+  width: 100%;
+  background: #0d1722;
+}
+
+.hero-group-cover .hero-group-art img {
+  display: block;
+  width: 100%;
+  height: calc(100dvh - 72px);
+  max-height: none;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-group-summary {
+  padding: clamp(3rem, 7vw, 6.5rem) 0;
+  background: var(--bg-section);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.hero-group-summary .container {
+  max-width: 980px;
+}
+
+.hero-group-story {
+  max-width: 850px;
+  margin: 0 auto;
+  color: var(--text-main);
+  font-family: var(--font-heading);
+  font-size: clamp(1.45rem, 2.7vw, 2.25rem);
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.hero-group-story strong {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.hero-group-bg-image {
+  object-position: center;
+}
+
+.hero-group-cover .hero-overlay-warm {
+  background: linear-gradient(180deg, rgba(5, 12, 20, 0.12) 0%, rgba(5, 12, 20, 0.18) 38%, rgba(5, 12, 20, 0.88) 100%);
+}
+
+.hero-group-cover .hero-overlay-vignette { background: none; }
+
+.hero-cover-inner {
+  align-content: end;
+  justify-content: start;
+  padding-top: 0;
+  padding-bottom: 6.25rem;
+  text-align: left;
+}
+
+.hero-cover-copy { max-width: 230px; }
+
+.hero-cover-kicker { margin-bottom: 0.7rem; color: #e6edf4; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; line-height: 1.45; }
+
+.hero-cover-copy .hero-display-title,
+.hero-cover-copy .hero-lead { display: none; }
+
+.hero-cover-copy .hero-display-accent { display: inline; margin-left: .28em; color: #d5dde6; }
+
+.hero-cover-copy .hero-lead { max-width: 600px; margin: .75rem auto 1rem; font-size: .94rem; line-height: 1.5; }
+
+.hero-cover-copy .hero-cta-group { display: grid; gap: .55rem; margin-bottom: 0; }
+.hero-cover-copy .hero-btn { justify-content: center; padding: .75rem .85rem; font-size: .82rem; }
+
 .hero-bg-slide.is-active .hero-bg-image {
   animation: none;
 }
@@ -61,10 +155,10 @@
   z-index: 2;
   background: linear-gradient(
     108deg,
-    rgba(15, 23, 42, 0.9) 0%,
-    rgba(15, 23, 42, 0.72) 30%,
-    rgba(15, 23, 42, 0.4) 58%,
-    rgba(15, 23, 42, 0.2) 100%
+    rgba(9, 15, 23, 0.96) 0%,
+    rgba(9, 15, 23, 0.82) 37%,
+    rgba(9, 15, 23, 0.43) 67%,
+    rgba(9, 15, 23, 0.16) 100%
   );
   pointer-events: none;
 }
@@ -412,6 +506,17 @@
     font-size: 0.68rem;
     padding-left: 1.25rem;
   }
+
+  .hero-group-cover { padding-top: 64px; }
+  .hero-group-cover .hero-group-art img { height: calc(100dvh - 64px); max-height: none; }
+  .hero-group-summary { padding: 1.5rem 0; }
+  .hero-group-story { font-size: 1.3rem; text-align: left; }
+
+  .hero-cover-inner { align-content: end; padding-top: 0; padding-bottom: 6.5rem; }
+  .hero-cover-copy { max-width: 100%; text-align: center; }
+  .hero-cover-copy .hero-cta-group { display: flex; justify-content: center; }
+  .hero-cover-copy .hero-display-title { font-size: 1.8rem; }
+  .hero-cover-copy .hero-display-accent { display: block; margin: .15rem 0 0; }
 
   .hero-scroll-hint {
     margin-right: 1.25rem;

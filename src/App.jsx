@@ -6,6 +6,8 @@ import About from './components/About';
 import Features from './components/Features';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Construction from './components/Construction';
+import Gallery from './components/Gallery';
 import './index.css';
 
 /**
@@ -29,6 +31,8 @@ export default function App() {
 
       {/* 4. FERMUAR ÇEŞİTLERİ VE ÜRÜNLER (Metal, Kemik, Gizli vb.) */}
       <Services />
+      <Gallery />
+      <Construction />
 
       {/* 5. NEDEN HAŞIMOĞLU FERMUAR? (Özellikler) */}
       <Features />

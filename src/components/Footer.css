@@ -71,6 +71,18 @@
   padding-left: 5px;
 }
 
+.footer-service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--white) !important;
+  font-weight: 600;
+}
+
+.footer-service-link:hover {
+  color: var(--primary-hover) !important;
+}
+
 .footer-contact-list {
   list-style: none;
   display: flex;

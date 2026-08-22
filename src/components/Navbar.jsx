@@ -35,7 +35,7 @@ export default function Navbar() {
           <span className="logo-badge">H</span>
           <div className="logo-text">
             <span className="logo-title">{siteInfo.companyName}</span>
-            <span className="logo-sub">Fermuar & İmalat</span>
+            <span className="logo-sub">Fermuar · Müteahhitlik</span>
           </div>
         </a>
 
@@ -44,6 +44,8 @@ export default function Navbar() {
           <a href="#hero" className="nav-link">Ana Sayfa</a>
           <a href="#about" className="nav-link">Hakkımızda</a>
           <a href="#services" className="nav-link">Ürünlerimiz</a>
+          <a href="#construction" className="nav-link">Müteahhitlik</a>
+          <a href="#gallery" className="nav-link">Galeri</a>
           <a href="#features" className="nav-link">Neden Biz?</a>
           <a href="#contact" className="nav-link">İletişim</a>
         </nav>
@@ -78,6 +80,8 @@ export default function Navbar() {
             <a href="#hero" onClick={closeMenu}>Ana Sayfa <ChevronRight size={18} /></a>
             <a href="#services" onClick={closeMenu}>Ürünlerimiz <ChevronRight size={18} /></a>
             <a href="#about" onClick={closeMenu}>Hakkımızda <ChevronRight size={18} /></a>
+            <a href="#construction" onClick={closeMenu}>Müteahhitlik <ChevronRight size={18} /></a>
+            <a href="#gallery" onClick={closeMenu}>Galeri <ChevronRight size={18} /></a>
             <a href="#features" onClick={closeMenu}>Neden Biz? <ChevronRight size={18} /></a>
             <a href="#contact" onClick={closeMenu}>İletişim <ChevronRight size={18} /></a>
             
