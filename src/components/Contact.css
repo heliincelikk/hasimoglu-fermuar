@@ -178,28 +178,6 @@
   cursor: pointer;
 }
 
-.map-iframe-container::after {
-  content: 'ğŸ“ Haritada AÃ§ar';
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background: var(--bg-section);
-  color: var(--text-main);
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius-full);
-  font-size: 0.85rem;
-  font-weight: 600;
-  box-shadow: var(--shadow-md);
-  opacity: 0.9;
-  border: 1px solid var(--border-soft);
-  transition: var(--transition-fast);
-}
-
-.map-iframe-container:hover::after {
-  opacity: 1;
-  background: var(--leather);
-}
-
 @media (max-width: 768px) {
   .map-header-bar {
     flex-direction: column;

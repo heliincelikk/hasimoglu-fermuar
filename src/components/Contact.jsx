@@ -101,7 +101,7 @@ export default function Contact() {
           <div className="map-header-bar">
             <div className="map-header-title">
               <MapPin size={20} className="map-pin-icon" />
-              <span><strong>Dükkan Konumu:</strong> {contact.address}</span>
+              <span><strong>Mağaza Adresi:</strong> {contact.address}</span>
             </div>
 
             <a 
